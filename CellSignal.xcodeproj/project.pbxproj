@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BF470C927D0027000EAD7FC /* ArcGIS in Frameworks */ = {isa = PBXBuildFile; productRef = 4BF470C827D0027000EAD7FC /* ArcGIS */; };
 		8888D762202B81980053D991 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8888D761202B81980053D991 /* MapViewController.swift */; };
 		889EFCAA201284FA00289DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EFCA9201284FA00289DEF /* AppDelegate.swift */; };
 		889EFCAC201284FA00289DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EFCAB201284FA00289DEF /* ViewController.swift */; };
@@ -25,7 +26,6 @@
 		889EFCD82017FC8C00289DEF /* CustomNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EFCD72017FC8C00289DEF /* CustomNotification.swift */; };
 		889EFCDA201800C300289DEF /* VNTankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EFCD9201800C300289DEF /* VNTankView.swift */; };
 		889EFCDC201802C700289DEF /* VNTankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889EFCDB201802C700289DEF /* VNTankView.xib */; };
-		889EFCDE2019423300289DEF /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 889EFCDD2019423300289DEF /* Settings.bundle */; };
 		889EFCE0201948A200289DEF /* SettingsBundleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889EFCDF201948A200289DEF /* SettingsBundleHelper.swift */; };
 		88BD00E92025107E000317EC /* MemoryObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD00E82025107E000317EC /* MemoryObservation.swift */; };
 		88BD00EB20251731000317EC /* DatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD00EA20251731000317EC /* DatabaseManagerProtocol.swift */; };
@@ -33,7 +33,6 @@
 		88BD00EF2028EA45000317EC /* UnsentFeaturesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BD00EE2028EA45000317EC /* UnsentFeaturesManager.swift */; };
 		88F7EBE8201BBE9000C9BD5F /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F7EBE6201BBE9000C9BD5F /* Crashlytics.framework */; };
 		88F7EBE9201BBE9000C9BD5F /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F7EBE7201BBE9000C9BD5F /* Fabric.framework */; };
-		88F7EBEC20213EEA00C9BD5F /* ArcGIS.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88F7EBEB20213EE900C9BD5F /* ArcGIS.bundle */; };
 		88F7EBEE2022235600C9BD5F /* OfflineFeaturesSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F7EBED2022235600C9BD5F /* OfflineFeaturesSender.swift */; };
 		88F7EBF0202268F500C9BD5F /* FeatureServiceEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F7EBEF202268F500C9BD5F /* FeatureServiceEditor.swift */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		88BD00EE2028EA45000317EC /* UnsentFeaturesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsentFeaturesManager.swift; sourceTree = "<group>"; };
 		88F7EBE6201BBE9000C9BD5F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		88F7EBE7201BBE9000C9BD5F /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		88F7EBEB20213EE900C9BD5F /* ArcGIS.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ArcGIS.bundle; sourceTree = "<group>"; };
 		88F7EBED2022235600C9BD5F /* OfflineFeaturesSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineFeaturesSender.swift; sourceTree = "<group>"; };
 		88F7EBEF202268F500C9BD5F /* FeatureServiceEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureServiceEditor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,17 +77,26 @@
 			files = (
 				88F7EBE8201BBE9000C9BD5F /* Crashlytics.framework in Frameworks */,
 				88F7EBE9201BBE9000C9BD5F /* Fabric.framework in Frameworks */,
+				4BF470C927D0027000EAD7FC /* ArcGIS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BA4156027CEDCBC00CDC852 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		889EFC9D201284FA00289DEF = {
 			isa = PBXGroup;
 			children = (
 				889EFCA8201284FA00289DEF /* CellSignal */,
 				889EFCA7201284FA00289DEF /* Products */,
+				4BA4156027CEDCBC00CDC852 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +111,6 @@
 		889EFCA8201284FA00289DEF /* CellSignal */ = {
 			isa = PBXGroup;
 			children = (
-				88F7EBEB20213EE900C9BD5F /* ArcGIS.bundle */,
 				88F7EBE6201BBE9000C9BD5F /* Crashlytics.framework */,
 				88F7EBE7201BBE9000C9BD5F /* Fabric.framework */,
 				889EFCC620165F8F00289DEF /* Database */,
@@ -169,8 +175,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				4BA4156227CEDCCA00CDC852 /* PBXTargetDependency */,
 			);
 			name = CellSignal;
+			packageProductDependencies = (
+				4BF470C827D0027000EAD7FC /* ArcGIS */,
+			);
 			productName = CellSignal;
 			productReference = 889EFCA6201284FA00289DEF /* CellSignal.app */;
 			productType = "com.apple.product-type.application";
@@ -200,6 +210,9 @@
 				Base,
 			);
 			mainGroup = 889EFC9D201284FA00289DEF;
+			packageReferences = (
+				4BA4155D27CEDC7A00CDC852 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */,
+			);
 			productRefGroup = 889EFCA7201284FA00289DEF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -214,10 +227,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				88F7EBEC20213EEA00C9BD5F /* ArcGIS.bundle in Resources */,
 				889EFCDC201802C700289DEF /* VNTankView.xib in Resources */,
 				889EFCB4201284FA00289DEF /* LaunchScreen.storyboard in Resources */,
-				889EFCDE2019423300289DEF /* Settings.bundle in Resources */,
 				889EFCB1201284FA00289DEF /* Assets.xcassets in Resources */,
 				889EFCAF201284FA00289DEF /* Main.storyboard in Resources */,
 			);
@@ -271,6 +282,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4BA4156227CEDCCA00CDC852 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 4BA4156127CEDCCA00CDC852 /* ArcGIS */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		889EFCAD201284FA00289DEF /* Main.storyboard */ = {
@@ -398,7 +416,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -410,26 +429,28 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RC7783J5Y3;
+				DEVELOPMENT_TEAM = 5VZ4B379WC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(HOME)/Library/SDKs/ArcGIS/iOS/Frameworks/Static",
 					"$(PROJECT_DIR)/CellSignal",
 				);
 				INFOPLIST_FILE = CellSignal/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-framework",
-					ArcGIS,
 					"-l",
 					"c++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esri.apl.CellSignal4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.apl.CellSignal5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -440,26 +461,28 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RC7783J5Y3;
+				DEVELOPMENT_TEAM = 5VZ4B379WC;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(HOME)/Library/SDKs/ArcGIS/iOS/Frameworks/Static",
 					"$(PROJECT_DIR)/CellSignal",
 				);
 				INFOPLIST_FILE = CellSignal/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-framework",
-					ArcGIS,
 					"-l",
 					"c++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.esri.apl.CellSignal4;
+				PRODUCT_BUNDLE_IDENTIFIER = com.esri.apl.CellSignal5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -485,6 +508,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4BA4155D27CEDC7A00CDC852 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/esri/arcgis-runtime-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 100.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4BA4156127CEDCCA00CDC852 /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA4155D27CEDC7A00CDC852 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */;
+			productName = ArcGIS;
+		};
+		4BF470C827D0027000EAD7FC /* ArcGIS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4BA4155D27CEDC7A00CDC852 /* XCRemoteSwiftPackageReference "arcgis-runtime-ios" */;
+			productName = ArcGIS;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		889EFCC720165FB800289DEF /* SignalObservation.xcdatamodeld */ = {

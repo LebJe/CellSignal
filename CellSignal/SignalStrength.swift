@@ -17,22 +17,36 @@ import CoreTelephony
 
 class SignalStrength: NSObject {
 
+	private func getSignalStrengthForReal() -> Int {
+		let keyWindow = UIApplication.shared.connectedScenes
+			.map({ $0 as? UIWindowScene })
+			.compactMap({ $0 })
+			.first?.windows.first
+		
+		if let statusBarManager = keyWindow?.windowScene?.statusBarManager,
+			let localStatusBar = statusBarManager.value(forKey: "createLocalStatusBar") as? NSObject,
+			let statusBar = localStatusBar.value(forKey: "statusBar") as? NSObject,
+			let _statusBar = statusBar.value(forKey: "_statusBar") as? UIView,
+			let currentData = _statusBar.value(forKey: "currentData")  as? NSObject,
+			let cellular = currentData.value(forKey: "cellularEntry") as? NSObject,
+			let signalStrength = cellular.value(forKey: "displayValue") as? Int {
+			return signalStrength
+		} else {
+			return 0
+		}
+	}
+	
     
     public func getSignalStrength() -> Int {
-        
-        if #available(iOS 11.0, *) {
-            return convertToSignal(bars: getSignalStrengthiOS11())
-        } else {
-            print("TODO: Nothing avaiable!")
-        }
-        
-        return 0
+		return getSignalStrengthForReal()
     }
     
     //https://www.igeeksblog.com/how-to-check-the-signal-strength-in-numbers-on-iphone-without-jailbreak/
     
     private func getSignalStrengthiPhoneX() -> Int {
         let application = UIApplication.shared
+		//application.connectedScenes.first!.sta
+		
         let statusBarView = application.value(forKey: "statusBar") as! UIView
         
         let statusBar = statusBarView.value(forKey: "statusBar") as! UIView
