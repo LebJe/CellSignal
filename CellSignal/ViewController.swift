@@ -513,15 +513,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
         }
     }
-    
-    @IBAction func mapPressed(_ sender: Any) {
-        
-        CustomNotification.show(parent: self, title: "Tracking Stopped", description: "While the map is open, the tracking of the GPS and Signal has paused.", checkForDuplicates: false)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mapViewController = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
-        mapViewController.modalPresentationStyle = .overCurrentContext
-        present(mapViewController, animated: true, completion: nil)
-    }
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "showMapSegue" {
+			CustomNotification.show(parent: self, title: "Tracking Stopped", description: "While the map is open, the tracking of the GPS and Signal has paused.", checkForDuplicates: false)
+		}
+	}
 }
-
